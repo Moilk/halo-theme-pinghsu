@@ -6,7 +6,7 @@
         <@postTag method="archiveMonth">
             <#list archives as archive>
                 <div class="categorys-item">
-                    <div class="categorys-title">${archive.month!}月 ${archive.year!}</div>
+                    <div class="categorys-title">${archive.month!}月 ${archive.year?c}</div>
                     <#if archive.posts?? && archive.posts?size gt 0>
                         <div class="post-lists">
                             <div class="post-lists-body">
@@ -14,7 +14,7 @@
                                     <div class="post-list-item">
                                         <div class="post-list-item-container">
                                             <div class="item-label">
-                                                <div class="item-title"><a href="${options.blog_url!}/archives/${post.url!}">${post.title!}</a></div>
+                                                <div class="item-title"><a href="${context!}/archives/${post.url!}">${post.title!}</a></div>
                                                 <div class="item-meta clearfix">
                                                     <div class="item-meta-date"> ${post.createTime?string('MMM d,yyyy')} </div>
                                                 </div>
