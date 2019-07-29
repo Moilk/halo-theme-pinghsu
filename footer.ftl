@@ -222,7 +222,11 @@ if ('addEventListener' in document) {
 <#if settings.post_mathjax!false>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body);
+    renderMathInElement(document.body, {delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                  {left: "$", right: "$", display: false}
+        ]});
+    });
 });
 </script>
 <script src="//res.moilk.top/js/katex/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
