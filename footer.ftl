@@ -221,6 +221,7 @@ if ('addEventListener' in document) {
 
 <#if settings.post_mathjax!false>
 <script src="//res.moilk.top/js/katex/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="//res.moilk.top/js/katex/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 </#if>
 
 <#-- 统计代码 -->
