@@ -30,7 +30,7 @@
     <script src="//cdnjs.loli.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <#if settings.post_mathjax!false>
-    <link href="//res.moilk.top/js/katex/katex.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://res.moilk.top/js/katex/katex.min.css">
    </#if> 
 </head>
 <body class="<#if is_index??>bg-grey</#if>" gtools_scp_screen_capture_injected="true">

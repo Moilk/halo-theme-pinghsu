@@ -220,15 +220,13 @@ if ('addEventListener' in document) {
 </script>
 
 <#if settings.post_mathjax!false>
-<script defer src="//res.moilk.top/js/katex/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
-<script defer src="//res.moilk.top/js/katex/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+<script src="https://res.moilk.top/js/katex/katex.min.js"></script>
+<script src="https://res.moilk.top/js/katex/contrib/auto-render.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
     renderMathInElement(document.body, {delimiters: [
         {left: "$$", right: "$$", display: true},
         {left: "$", right: "$", display: false}
     ]});
-});
 </script>
 </#if>
 
