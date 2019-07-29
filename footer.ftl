@@ -228,8 +228,6 @@ document.addEventListener("DOMContentLoaded", function() {
     ]});
 });
 </script>
-<script src="//res.moilk.top/js/katex/katex.min.js"></script>
-<script defer src="//res.moilk.top/js/katex/contrib/auto-render.min.js"></script>
 </#if>
 
 <#-- 统计代码 -->

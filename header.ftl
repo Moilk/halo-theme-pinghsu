@@ -8,7 +8,7 @@
     <#if settings.pinghsu_general_dns!false>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//cdnjs.loli.net" />
-    <link rel="dns-prefetch" href="//gravatar.loli.net" />
+    <link rel="dns-prefetch" href="https://gravatar.loli.net" />
     </#if>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -31,6 +31,8 @@
     <![endif]-->
     <#if settings.post_mathjax!false>
     <link href="//res.moilk.top/js/katex/katex.min.css" rel="stylesheet">
+    <script src="//res.moilk.top/js/katex/katex.min.js"></script>
+    <script defer src="//res.moilk.top/js/katex/contrib/auto-render.min.js"></script>
    </#if> 
 </head>
 <body class="<#if is_index??>bg-grey</#if>" gtools_scp_screen_capture_injected="true">
