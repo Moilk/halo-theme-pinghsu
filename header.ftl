@@ -31,8 +31,6 @@
     <![endif]-->
     <#if settings.post_mathjax!false>
     <link href="//res.moilk.top/js/katex/katex.min.css" rel="stylesheet">
-    <script src="//res.moilk.top/js/katex/katex.min.js"></script>
-    <script defer src="//res.moilk.top/js/katex/contrib/auto-render.min.js"></script>
    </#if> 
 </head>
 <body class="<#if is_index??>bg-grey</#if>" gtools_scp_screen_capture_injected="true">
