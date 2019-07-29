@@ -29,6 +29,9 @@
     <script src="//cdnjs.loli.net/ajax/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjs.loli.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <#if settings.post_mathjax!false>
+    <link href="//res.moilk.top/js/katex/katex.min.css" rel="stylesheet">
+   </#if> 
 </head>
 <body class="<#if is_index??>bg-grey</#if>" gtools_scp_screen_capture_injected="true">
 <!--[if lt IE 8]>

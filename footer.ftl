@@ -239,7 +239,7 @@ MathJax.Hub.Config({
 });
 MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 </script>
-<script src="//cdnjs.loli.net/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//res.moilk.top/js/katex/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 </#if>
 
 <#-- 统计代码 -->
