@@ -141,7 +141,7 @@ var postDirectoryBuild = function() {
         }
         directory.appendChild(root);
     };
-    createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), true);
+    createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), ${settings.post_toc_order?c});
 };
 postDirectoryBuild();
 </script>
