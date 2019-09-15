@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="https://res.moilk.top/js/katex/katex.min.css">
     </#if> 
 
-    <#if post?? && settings.post_highlight!true>
+    <#if settings.post_highlight!true>
     <link href="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/styles/${settings.post_highlight_theme!'Default'}.min.css" rel="stylesheet">
     </#if>
 </head>
