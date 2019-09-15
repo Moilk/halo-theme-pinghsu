@@ -150,11 +150,6 @@ postDirectoryBuild();
 <#--<?php $this->footer(); ?>-->
 <script src="//cdnjs.loli.net/ajax/libs/headroom/0.9.1/headroom.min.js"></script>
 
-<#if settings.post_highlight!true>
-<script type="text/javascript" src="${static!}/source/lib/prism/js/prism.js"></script>
-</#if>
-
-
 <#if settings.pjax!false>
 <script src="${static!}/source/js/instantclick.min.js?v20140319"></script>
 </#if>
