@@ -23,11 +23,10 @@
     <meta name="keywords" content="${keywords!}" />
     <meta name="description" content="${description!}" />
 
-    <#if post??>
+    <link href="${static!}/source/css/style.min.css" rel="stylesheet">
+    <#if post?? && settings.post_highlight!true>
     <link href="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/styles/${settings.post_highlight_theme!'Default'}.min.css" rel="stylesheet">
     </#if>
-    
-    <link href="${static!}/source/css/style.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//cdnjs.loli.net/ajax/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjs.loli.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
