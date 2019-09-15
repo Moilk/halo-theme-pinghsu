@@ -111,6 +111,34 @@ style:
           label: 开启
         - value: false
           label: 关闭
+    post_highlight_theme:
+      name: post_highlight_theme
+      label: 文章代码高亮主题
+      type: select
+      default: Default
+      options:
+        - value: default
+          label: Default
+        - value: atom-one-light
+          label: Atom One Light
+        - value: atom-one-dark
+          label: Atom One Dark
+        - value: darkula
+          label: Darkula
+        - value: dark
+          label: Dark
+        - value: github
+          label: Github
+        - value: monoka
+          label: Monokai
+        - value: monokai-sublime
+          label: Monokai Sublime
+        - value: solarized-light
+          label: Solarized Light
+        - value: solarized-dark
+          label: Solarized Dark
+        - value: tomorrow-night
+          label: Tomorrow Night
     post_mathjax:
       name: post_mathjax
       label: 文章 Mathjax 设置
