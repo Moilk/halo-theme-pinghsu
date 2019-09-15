@@ -206,10 +206,6 @@ var header = new Headroom(document.getElementById("header"), {
 });
 header.init();
 
-<#if (settings.pjax!false) && (settings.post_highlight!true) && post??>
-hljs.initHighlightingOnLoad();
-</#if>
-
 <#if settings.fast_click!false>
 if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
