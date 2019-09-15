@@ -73,7 +73,7 @@ var postDirectoryBuild = function() {
         }
         return result;
     },
-    createPostDirectory = function(article, directory, isDirNum) {
+    createPostDirectory = function(article, directory, isDirNum = false) {
         var contentArr = [],
             titleId = [],
             levelArr, root, level,
@@ -141,7 +141,7 @@ var postDirectoryBuild = function() {
         }
         directory.appendChild(root);
     };
-    createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), true);
+    createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), ${settings.post_toc_order!false});
 };
 postDirectoryBuild();
 </script>

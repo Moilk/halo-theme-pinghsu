@@ -89,6 +89,17 @@ style:
           label: 开启
         - value: false
           label: 关闭
+    post_toc_order:
+      name: post_toc_order
+      label: 文章目录序号生成
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
     post_highlight:
       name: post_highlight
       label: 代码高亮设置
