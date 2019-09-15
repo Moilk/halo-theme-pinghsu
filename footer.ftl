@@ -141,11 +141,7 @@ var postDirectoryBuild = function() {
         }
         directory.appendChild(root);
     };
-    val isDirNum = false;
-    <#if settings.post_toc_order!false>
-        isDirNum = true;
-    </#if>
-    createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), isDirNum);
+    createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), true);
 };
 postDirectoryBuild();
 </script>
