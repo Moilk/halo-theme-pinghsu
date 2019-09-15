@@ -23,7 +23,7 @@
     <meta name="keywords" content="${keywords!}" />
     <meta name="description" content="${description!}" />
 
-    <#if post?? && settings.post_highlight!true>
+    <#if post??>
     <link href="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/styles/${settings.post_highlight_theme!'Default'}.min.css" rel="stylesheet">
     </#if>
     
