@@ -34,7 +34,7 @@
     </#if> 
 
     <#if post?? && settings.post_highlight!true>
-    <link href="${static!}/source/lib/prism/css/prism-${settings.post_highlight_theme!'Default'}.css" rel="stylesheet">
+    <link href="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/styles/${settings.post_highlight_theme!'Default'}.min.css" rel="stylesheet">
     </#if>
 </head>
 <body class="<#if is_index??>bg-grey</#if>" gtools_scp_screen_capture_injected="true">

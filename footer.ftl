@@ -151,7 +151,7 @@ postDirectoryBuild();
 <script src="//cdnjs.loli.net/ajax/libs/headroom/0.9.1/headroom.min.js"></script>
 
 <#if settings.post_highlight!true>
-<script type="text/javascript" src="${static!}/source/lib/prism/js/prism.js"></script>
+<script src="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
 </#if>
 
 
@@ -207,7 +207,7 @@ var header = new Headroom(document.getElementById("header"), {
 header.init();
 
 <#if (settings.pjax!false) && (settings.post_highlight!true) && post??>
-Prism.highlightAll();
+hljs.initHighlightingOnLoad();
 </#if>
 
 <#if settings.fast_click!false>
@@ -239,7 +239,7 @@ InstantClick.on('change', function(isInitialLoad){
     <#if settings.post_highlight!true>
     var blocks = document.querySelectorAll('pre code');
     for (var i = 0; i < blocks.length; i++) {
-        Prism.highlightElement(blocks[i]);
+        hljs.highlightBlock(blocks[i]);
     }
     </#if>
 
