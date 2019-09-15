@@ -35,7 +35,6 @@
 
     <#if post?? && settings.post_highlight!true>
     <link href="${static!}/source/lib/prism/css/prism-${settings.post_highlight_theme!'Default'}.css" rel="stylesheet">
-    <script type="text/javascript" src="${static!}/source/lib/prism/js/prism.js"></script>
     </#if>
 </head>
 <body class="<#if is_index??>bg-grey</#if>" gtools_scp_screen_capture_injected="true">
