@@ -24,17 +24,18 @@
     <meta name="description" content="${description!}" />
 
     <link href="${static!}/source/css/style.min.css" rel="stylesheet">
-    
-    <#if post?? && settings.post_highlight!true>
-    <link href="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/styles/${settings.post_highlight_theme!'Default'}.min.css" rel="stylesheet">
-    </#if>
+
     <!--[if lt IE 9]>
     <script src="//cdnjs.loli.net/ajax/libs/html5shiv/r29/html5.min.js"></script>
     <script src="//cdnjs.loli.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <#if settings.post_mathjax!false>
     <link rel="stylesheet" href="https://res.moilk.top/js/katex/katex.min.css">
-   </#if> 
+    </#if> 
+
+    <#if post?? && settings.post_highlight!true>
+    <link href="//cdnjs.loli.net/ajax/libs/highlight.js/9.10.0/styles/${settings.post_highlight_theme!'Default'}.min.css" rel="stylesheet">
+    </#if>
 </head>
 <body class="<#if is_index??>bg-grey</#if>" gtools_scp_screen_capture_injected="true">
 <!--[if lt IE 8]>
