@@ -217,12 +217,16 @@ if ('addEventListener' in document) {
 
 <#if settings.post_mathjax!false>
 <script src="https://res.moilk.top/js/katex/katex.min.js"></script>
-<script src="https://res.moilk.top/js/katex/contrib/auto-render.min.js"></script>
 <script>
-    renderMathInElement(document.body, {delimiters: [
-        {left: "$$", right: "$$", display: true},
-        {left: "$", right: "$", display: false}
-    ]});
+    var mathElems = document.getElementsByClassName("katex");
+    var elems = [];
+    for (const i in mathElems) {
+        if (mathElems.hasOwnProperty(i)) elems.push(mathElems[i]);
+    }
+
+    elems.forEach(elem => {
+        katex.render(elem.textContent, elem, { throwOnError: false, displayMode: elem.nodeName !== 'SPAN', });
+    });
 </script>
 </#if>
 
@@ -238,12 +242,6 @@ InstantClick.on('change', function(isInitialLoad){
         hljs.highlightBlock(blocks[i]);
     }
     </#if>
-
-    if (isInitialLoad === false) {
-    <#if settings.post_mathjax!false>
-        if (typeof MathJax !== 'undefined'){MathJax.Hub.Queue(["Typeset",MathJax.Hub]);}
-    </#if>
-    }
 });
 InstantClick.init('mousedown');
 </script>
