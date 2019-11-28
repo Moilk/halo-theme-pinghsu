@@ -13,49 +13,59 @@
 <@header title="${options.blog_title!}" keywords="${options.seo_keywords!}" description="${options.seo_description!}"></@header>
 
 <div class="main-content index-page clearfix <#if (settings.post_list!'one') == 'one'>onelist-page</#if>">
-	<div class="post-lists">
-		<div class="post-lists-body">
-			<#list posts.content as post>
-                <#if (settings.post_list!'one') == 'three'>
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <#if post.thumbnail?? && post.thumbnail!=''>
-                            <div class="item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor /></#if>" style="background-image:url(${post.thumbnail!});"></div>
-                        <#else>
-                            <div class="item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor /></#if>" style="background-image:url(${static!}/source/images/thumbs/<@fun.randThumbs/>);"></div>
-                        </#if>
-                        <a href="${context!}/archives/${post.url!}">
-                            <div class="item-desc">
-                                <p>${post.summary!}</p>
+    <div class="post-lists">
+        <div class="post-lists-body">
+            <#list posts.content as post>
+                <#if (settings.post_list!'one')=='three'>
+                    <div class="post-list-item">
+                        <div class="post-list-item-container">
+                            <#if post.thumbnail?? && post.thumbnail!=''>
+                                <div class="item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor /></#if>"
+                                    style="background-image:url(${post.thumbnail!});"></div>
+                            <#else>
+                                <div class="item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor /></#if>"
+                                    style="background-image:url(${static!}/source/images/thumbs/<@fun.randThumbs/>);">
+                                </div>
+                            </#if>
+                            <a href="${context!}/archives/${post.url!}">
+                                <div class="item-desc">
+                                    <p>${post.summary!}</p>
+                                </div>
+                            </a>
+                            <div
+                                class="item-slant reverse-slant <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor /></#if>">
                             </div>
-                        </a>
-                        <div class="item-slant reverse-slant <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor /></#if>"></div>
-                        <div class="item-slant"></div>
-                        <div class="item-label">
-                            <div class="item-title">
-                                <a href="${context!}/archives/${post.url!}">${post.title!}</a>
-                            </div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-<@fun.randBgIco />"
-                                     style="background: url(${static!}/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
-                                <div class="item-meta-cat">
-                                    <#if post.categories?? && post.categories?size gt 0>
-                                        <a href="${context!}/categories/${post.categories[0].slugName}">${post.categories[0].name}</a>
-                                    </#if>
+                            <div class="item-slant"></div>
+                            <div class="item-label">
+                                <div class="item-title">
+                                    <a href="${context!}/archives/${post.url!}">${post.title!}</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-ico bg-ico-<@fun.randBgIco />"
+                                        style="background: url(${static!}/source/images/bg-ico.png) no-repeat;background-size: 40px auto;">
+                                    </div>
+                                    <div class="item-meta-cat">
+                                        <#if post.categories?? && post.categories?size gt 0>
+                                            <a
+                                                href="${context!}/categories/${post.categories[0].slugName}">${post.categories[0].name}</a>
+                                        </#if>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </#if>
-                <#if (settings.post_list!'one') == 'one'>
+                <#if (settings.post_list!'one')=='one'>
                     <div class="post-onelist-item">
                         <div class="post-onelist-item-container">
                             <a href="${context!}/archives/${post.url}">
                                 <#if post.thumbnail?? && post.thumbnail!=''>
-                                    <div class="onelist-item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor/></#if>" style="background-image:url(${post.thumbnail!});"></div>
+                                    <div class="onelist-item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor/></#if>"
+                                        style="background-image:url(${post.thumbnail!});"></div>
                                 <#else>
-                                    <div class="onelist-item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor/></#if>" style="background-image:url(${static!}/source/images/thumbs/<@fun.randThumbs/>);"></div>
+                                    <div class="onelist-item-thumb <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor/></#if>"
+                                        style="background-image:url(${static!}/source/images/thumbs/<@fun.randThumbs/>);">
+                                    </div>
                                 </#if>
                             </a>
                             <div class="onelist-item-info">
@@ -67,11 +77,14 @@
                                         发布于 ${post.createTime?string('MMM d,yyyy')}
                                     </time>in
                                     <#if post.categories?? && post.categories?size gt 0>
-                                        <a href="${context!}/categories/${post.categories[0].slugName}">${post.categories[0].name}</a>
+                                        <a
+                                            href="${context!}/categories/${post.categories[0].slugName}">${post.categories[0].name}</a>
                                     </#if>
                                     </a>
                                 </div>
-                                <div class="item-meta-hr <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor/></#if>"></div>
+                                <div
+                                    class="item-meta-hr <#if !settings.post_color!false> bg-deepgrey<#else >bg-<@fun.randBgColor/></#if>">
+                                </div>
                                 <div class="item-content">
                                     <p>${post.summary!}</p>
                                 </div>
@@ -82,40 +95,46 @@
                         </div>
                     </div>
                 </#if>
-			</#list>
-		</div>
-	</div>
-	<div class="lists-navigator clearfix">
+            </#list>
+        </div>
+    </div>
+    <div class="pagination clearfix">
         <#if posts.totalPages gt 1>
-            <ol class="page-navigator">
-                <#if posts.hasPrevious()>
-                    <#if posts.number == 1>
-                        <li class="pre">
-                            <a href="${context!}/">←</a>
-                        </li>
-                    <#else>
-                        <li class="pre">
-                            <a href="${context!}/page/${posts.number}">←</a>
-                        </li>
-                    </#if>
+            <#if posts.hasPrevious()>
+                <#if posts.number==1>
+                    <a class="extend prev" href="${context!}/">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                <#else>
+                    <a class="extend prev" href="${context!}/page/${posts.number}">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 </#if>
-                <#list rainbow as r>
-                    <#if r == posts.number+1>
-                        <li class="current">
-                            <a href="${context!}/page/${r}">${r}</a>
-                        </li>
-                    <#else>
-                        <li>
-                            <a href="${context!}/page/${r}">${r}</a>
-                        </li>
-                    </#if>
-                </#list>
-                <#if posts.hasNext()>
-                    <li class="next">
-                        <a href="${context!}/page/${posts.number+2}/">→</a>
-                    </li>
+            </#if>
+            <#if (rainbow?size> 0 && rainbow[0] >= 2)>
+                <a class="page-number" href="${context!}/page/1">1</a>
+                <#if (rainbow[0]> 2)>
+                    <span class="space">...</span>
                 </#if>
-            </ol>
+            </#if>
+            <#list rainbow as r>
+                <#if r==posts.number+1>
+                    <span class="page-number current">${r}</span>
+                <#else>
+                    <a class="page-number" href="${context!}/page/${r}">${r}</a>
+                </#if>
+            </#list>
+            <#if (rainbow?size> 0 && rainbow[rainbow?size-1] < posts.totalPages)>
+                    <#if (rainbow[rainbow?size-1] < posts.totalPages-1)>
+                        <span class="space">...</span>
+                    </#if>
+                    <a class="page-number" href="${context!}/page/${posts.totalPages}">${posts.totalPages}</a>
+            </#if>
+            <#if posts.hasNext()>
+                <a class="extend next" rel="next" href="${context!}/page/${posts.number+2}/">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </#if>
         </#if>
     </div>
 </div>

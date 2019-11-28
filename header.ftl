@@ -24,6 +24,7 @@
     <meta name="description" content="${description!}" />
 
     <link href="${static!}/source/css/style.min.css" rel="stylesheet">
+    <link href="${static!}/source/css/font-awesome.min.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="//cdnjs.loli.net/ajax/libs/html5shiv/r29/html5.min.js"></script>
