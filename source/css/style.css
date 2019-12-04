@@ -1510,50 +1510,44 @@ textarea:-ms-input-placeholder {
 .onelist-page .pagination {
   margin: 35px 0 35px;
 }
-
 .page-number-basic,
-.pagination .prev,
 .pagination .next,
 .pagination .page-number,
-.pagination .space {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    margin: 0 10px;
-    padding: 0 10px;
-    line-height: 30px;
-}
-
 .pagination .prev,
-.pagination .next,
-.pagination .page-number {
-    border-bottom: 0;
-    border-top: 1px solid #eee;
-    transition-property: border-color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-}
-
-.pagination .page-number.current,
-.algolia-pagination .current .page-number {
-    color: #fff;
-    background: #ccc;
-    border-top-color: #ccc;
-}
-
 .pagination .space {
-    padding: 0;
-    margin: 0;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  margin: 0 10px;
+  padding: 0 10px;
+  line-height: 30px;
 }
-
+.pagination .next,
+.pagination .page-number,
+.pagination .prev {
+  border-bottom: 0;
+  border-top: 1px solid #eee;
+  transition-property: border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.algolia-pagination .current .page-number,
+.pagination .page-number.current {
+  color: #fff;
+  background: #ccc;
+  border-top-color: #ccc;
+}
+.pagination .space {
+  padding: 0;
+  margin: 0;
+}
 #comments .pagination {
   margin: 20px 0;
   padding: 0 10px;
   list-style: none;
   text-align: center;
 }
-
 #comments .pagination .page-number.current {
   color: #eb5055;
 }
@@ -1811,10 +1805,15 @@ textarea:-ms-input-placeholder {
 .footer-meta .meta-comments li a {
   color: #767676;
 }
+.math {
+  overflow: auto;
+}
+.math::-webkit-scrollbar,
 code::-webkit-scrollbar {
   height: 10px;
-  background-color: ##00000000;
+  background-color: #00000000;
 }
+.math::-webkit-scrollbar-thumb:hover,
 code::-webkit-scrollbar-thumb:hover {
   border-radius: 10px;
   background-color: #989898;
@@ -1863,22 +1862,19 @@ code::-webkit-scrollbar-thumb:hover {
     margin: 25px 0 30px;
     border-top: none;
   }
-
   .page-number-basic,
-  .pagination .prev,
   .pagination .next,
-  .pagination .page-number {
+  .pagination .page-number,
+  .pagination .prev {
     margin: 0 5px;
   }
-
-  .pagination .prev,
   .pagination .next,
-  .pagination .page-number {
+  .pagination .page-number,
+  .pagination .prev {
     margin-bottom: 10px;
     border-top: 0;
     border-bottom: 1px solid #eee;
   }
-
   .post-header-thumb {
     height: 250px;
   }
