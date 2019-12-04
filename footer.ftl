@@ -218,7 +218,7 @@ if ('addEventListener' in document) {
 <#if settings.post_mathjax!false>
 <script src="https://res.moilk.top/js/katex/katex.min.js"></script>
 <script>
-    var mathElems = document.getElementsByClassName("katex");
+    var mathElems = document.getElementsByClassName("math");
     var elems = [];
     for (const i in mathElems) {
         if (mathElems.hasOwnProperty(i)) elems.push(mathElems[i]);
